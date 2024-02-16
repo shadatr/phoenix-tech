@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.transtion-bg {
+    transition: background-color 0.3s ease;
+  }
+
+.transtion-text{
+    transition: color 0.4s ease;
+}
