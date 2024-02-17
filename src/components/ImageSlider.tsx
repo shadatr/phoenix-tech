@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-const images=[{image:"./../../public/background2.jpg",label: "Insightful Thinking", description:"Empowering smart decision through data and building the best software"},
-{image:"./../../public/background1.jpg",label:"The future of merchandising has arrived", description:"Lower the cost of store execution at retail"},
-{image:"./../../public/background3.webp",label: "Measure performance & react", description: "Increase  ROI by optimizing your investments"}]
+const images=[{image:"./../../background2.jpg",label: "Insightful Thinking", description:"Empowering smart decision through data and building the best software"},
+{image:"./../../background1.jpg",label:"The future of merchandising has arrived", description:"Lower the cost of store execution at retail"},
+{image:"./../../background3.webp",label: "Measure performance & react", description: "Increase  ROI by optimizing your investments"}]
 
 const ImageSlider = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
