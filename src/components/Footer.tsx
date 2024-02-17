@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "./../../public/PhoenixTech.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
