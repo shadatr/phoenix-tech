@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+ 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -12,16 +17,28 @@ export default {
         primary: "#000000",
         secondary: "#FFFFFF",
         darkBlue: "#060121",
+        medBlue: "#0A293F",
         babyBlue:"#2F89DD"
       },
       fontSize: {
-        xxlg: "60px",
+        xxlg: "45px",
         xlg: "32px",
         lg: "30px",
         md: "20px",
         sm:"16px",
         xsm:"15px",
         xxsm:"8px"
+      },
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
   },
   screens: {
@@ -31,6 +48,16 @@ export default {
     xl: "1440px",
   },
 },
-  plugins: [],
+  plugins: [addVariablesForColors],
 }
 
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
