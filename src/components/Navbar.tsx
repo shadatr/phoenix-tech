@@ -32,12 +32,12 @@ const Navbar = () => {
       <img className="" src={logo} />
       <span className="flex gap-10 font-bold">
         <Link className={`transtion-text hover:text-babyBlue ${isActive("/") ? scroll ? "text-primary" : "text-babyBlue":""}`} to="/">Home</Link>
-        <Link className={`transtion-text hover:text-babyBlue ${isActive("/about-us") ?scroll ? "text-primary" : "text-babyBlue":""}`} to="/about-us">About Us</Link>
-        <Link className={`transtion-text hover:text-babyBlue ${isActive("/services")?scroll ? "text-primary" : "text-babyBlue":""}`} to="/services">Services</Link>
-        <Link className={`transtion-text hover:text-babyBlue ${isActive("/software")?scroll ? "text-primary" : "text-babyBlue":""}`} to="/software">Software</Link>
-        <Link className={`transtion-text hover:text-babyBlue ${isActive("/Blog")?scroll ? "text-primary" : "text-babyBlue":""}`} to="/Blog">Blog</Link>
-        <Link className={`transtion-text hover:text-babyBlue ${isActive("/case-studies") ?scroll ? "text-primary" : "text-babyBlue":""}`} to="/case-studies">Case Studies</Link>
-        <Link className={`transtion-text hover:text-babyBlue ${isActive("/contact-us") ?scroll ? "text-primary" : "text-babyBlue":""}`} to="/contact-us">Contact Us</Link>
+        <Link className={`transtion-text hover:text-babyBlue ${isActive("/about-us") ?scroll ? "text-primary" : "text-babyBlue":""}`} to="/#about-us">About Us</Link>
+        <Link className={`transtion-text hover:text-babyBlue ${isActive("/services")?scroll ? "text-primary" : "text-babyBlue":""}`} to="#services">Services</Link>
+        <Link className={`transtion-text hover:text-babyBlue ${isActive("/software")?scroll ? "text-primary" : "text-babyBlue":""}`} to="#software">Software</Link>
+        <Link className={`transtion-text hover:text-babyBlue ${isActive("/Blog")?scroll ? "text-primary" : "text-babyBlue":""}`} to="#Blog">Blog</Link>
+        <Link className={`transtion-text hover:text-babyBlue ${isActive("/case-studies") ?scroll ? "text-primary" : "text-babyBlue":""}`} to="#case-studies">Case Studies</Link>
+        <Link className={`transtion-text hover:text-babyBlue ${isActive("/contact-us") ?scroll ? "text-primary" : "text-babyBlue":""}`} to="#contact-us">Contact Us</Link>
       </span>
         <Switch
           defaultSelected
