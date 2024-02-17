@@ -217,7 +217,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div id="software" className="p-20 ">
+      <div id="case-studies" className="p-20 ">
         <Reveal className="text-babyBlue text-md">•CASE STUDIES•</Reveal>
         <Reveal className="text-xxlg font-bold">Buisness Cases</Reveal>
         <div className="flex w-full justify-between pt-5">
