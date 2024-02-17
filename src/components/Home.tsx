@@ -105,6 +105,7 @@ const blogs = [
 const Home = () => {
   return (
     <div>
+      
       <ImageSlider />
       <div id="about-us" className="p-20 ">
         <Reveal className="text-babyBlue text-md">•About Us•</Reveal>
@@ -147,7 +148,7 @@ const Home = () => {
         <Reveal className="text-babyBlue text-md">•Services•</Reveal>
         <Reveal className="text-xxlg font-bold">Services we offer</Reveal>
         <div className="grid grid-cols-2 gap-5 pt-5">
-          <Link to="/services/catagory-management">
+          <Link to="/services/category-management">
             <Card className="gap-3 flex flex-col items-center justify-center">
               <img src="./../../categories.png" width={"80px"} />
               <p className="text-lg font-bold">Category Management</p>
@@ -250,7 +251,7 @@ const Home = () => {
             <Reveal>
               <motion.div whileHover={{ y: 10 }} transition={{ duration: 0.5 }}>
                 <Link
-                  to="./case-studies/grocer"
+                  to="./case-studies/alcohol"
                   className="w-[450px] h-[370px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
                 >
                   <img

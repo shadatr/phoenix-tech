@@ -44,13 +44,6 @@
 
 
 
-.image-slide {
-  position: relative;
-  width: 100%;
-  height: 100vh; 
-  overflow: hidden; 
-}
-
 
 .image-slide::before {
   content: ''; /* Create a pseudo-element to serve as the overlay */
@@ -118,3 +111,4 @@
     background-color: blue; /* Final color */
   }
 }
+
