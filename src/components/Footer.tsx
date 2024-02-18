@@ -4,20 +4,20 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="px-20 py-40 flex justify-between" id="contact-us">
+    <div className="lg:px-20 lg:py-40 sm:px-8 sm:py-8 flex gap-2 sm:flex-col lg:flex-row justify-between" id="contact-us">
       <span className="flex flex-col gap-5">
-        <img src={logo} className="w-[200px]"/>
+        <img src={logo} className="lg:w-[200px] sm:w-[100px]"/>
         <span>
           <input
             placeholder="Email Address"
-            className="p-5 w-[300px] rounded-l-lg"
+            className="lg:p-5 sm:p-2 lg:w-[300px] sm:w-[150px] rounded-l-lg"
           />
-          <button className="bg-babyBlue text-secondary p-5 rounded-r-lg focus:outline-none">
+          <button className="bg-babyBlue text-secondary lg:p-5 sm:p-2 rounded-r-lg focus:outline-none">
             Subscribe
           </button>
         </span>
       </span>
-      <span className="text-xsm flex flex-col gap-2">
+      <span className="lg:text-xsm sm:text-xxsm flex flex-col gap-2">
         <h1 className="font-bold text-md">Software</h1>
         <Link to="/software/merchandising-app">
           <motion.p whileHover={{ x: 10 }} transition={{ duration: 0.5 }}>
@@ -35,7 +35,7 @@ const Footer = () => {
           </motion.p>
         </Link>
       </span>
-      <span className="text-xsm flex flex-col gap-2">
+      <span className="lg:text-xsm sm:text-xxsm  flex flex-col gap-2">
         <h1 className="font-bold text-md">Services</h1>
         <Link to="/services/dashboards">
           <motion.p whileHover={{ x: 10 }} transition={{ duration: 0.5 }}>
@@ -58,7 +58,7 @@ const Footer = () => {
           </motion.p>
         </Link>
       </span>
-      <span className="text-xsm flex flex-col gap-2">
+      <span className="lg:text-xsm sm:text-xxsm  flex flex-col gap-2">
         <h1 className="font-bold text-md">Contact Information</h1>
         <p>171 East Liberty Street, Unit 301, Toronto, ON M6K 3P6</p>
         <p>360 St Jacques St, Montreal, Quebec H2Y 1P5</p>

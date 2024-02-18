@@ -126,21 +126,21 @@ const Servis = () => {
 
   return (
     <div>
-      <div className=" h-[30vh] w-screen">
-        <p className="flex absolute  w-screen h-[30vh] justify-center items-center text-xxlg font-extrabold">
+      <div className=" lg:h-[30vh] sm:h-[15vh] w-screen">
+        <p className="flex absolute w-screen lg:h-[30vh] sm:h-[15vh] justify-center items-center lg:text-xxlg sm:text-xmd font-extrabold">
           {service?.title}
         </p>
-        <img src="./../../background.webp" className="h-[30vh] w-screen" />
+        <img src="./../../background.webp" className="lg:h-[30vh] sm:h-[15vh] w-screen" />
       </div>
-      <div className="p-20 grid gap-10">
-        <img src={`./../../${service?.image}`}  />
-        <Reveal className="text-xlg font-bold">{service?.begginning}</Reveal>
-        <Reveal className="flex flex-col gap-5">
+      <div className="lg:p-20 sm:p-8 grid gap-10">
+        <img src={`./../../${service?.image}`} className="lg:max-h-[500px] sm:max-h-[300px] sm:max-w-[300px] lg:max-w-full"  />
+        <Reveal className="lg:text-xlg sm:text-xmd font-bold">{service?.begginning}</Reveal>
+        <Reveal className="flex flex-col gap-5 lg:text-sm sm:text-xsm">
           {service?.explanations.map((i) => (
             <p>{i}</p>
           ))}
         </Reveal>
-        <span className="flex gap-8">
+        <span className="flex justify-center items-center lg:flex-row sm:flex-col gap-8">
             {service?.cards.map((i)=><Card className="w-[300px] h-[250px]">
                 <span className="flex flex-col justify-center items-center text-center gap-3 w-full">
                  <img className="w-[100px]" src={`./../../${i.logo}`}/>   

@@ -19,11 +19,11 @@ const ImageSlider = () => {
     <div className="image-slider">
       {images.map((item, index) => (
         <div key={index} className={`image-slide ${index === currentImageIndex ? 'active' : ''}`}>
-           <span  className={`flex absolute flex-col justify-center items-center h-screen w-screen z-20 ${index === currentImageIndex ? 'animate-downToUp' : ''}`}>
-            <p className='text-xxlg font-black'>
+           <span  className={`flex absolute flex-col justify-center items-center text-center h-screen w-screen z-20 ${index === currentImageIndex ? 'animate-downToUp' : ''}`}>
+            <p className='lg:text-xxlg sm:text-lg font-black'>
             {item.label}
             </p>
-            <p className='text-md font-bold '>{item.description}</p>
+            <p className='lg:text-md sm:text-xsm font-bold '>{item.description}</p>
            </span>
           <img
             src={item.image}

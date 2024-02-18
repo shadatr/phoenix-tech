@@ -104,20 +104,19 @@ const blogs = [
 
 const Home = () => {
   return (
-    <div>
-      
+    <div className="w-screen">
       <ImageSlider />
-      <div id="about-us" className="p-20 ">
-        <Reveal className="text-babyBlue text-md">•About Us•</Reveal>
-        <Reveal className="text-xxlg font-bold">Our Vision and Mission</Reveal>
+      <div id="about-us" className="lg:p-20 sm:p-5">
+        <Reveal className="text-babyBlue lg:text-md sm:text-xsm">•About Us•</Reveal>
+        <Reveal className="lg:text-xxlg sm:text-xmd font-bold">Our Vision and Mission</Reveal>
         <Reveal>
           <HoverEffect
             items={card}
-            className="flex items-center justify-center h-[400px] w-full"
+            className="lg:flex items-center justify-center lg:h-[400px] w-full"
           />
         </Reveal>
-        <Reveal className="text-xxlg font-bold ">Engaging Content</Reveal>
-        <Reveal className="py-10 ">
+        <Reveal className="lg:text-xxlg sm:text-xmd  font-bold ">Engaging Content</Reveal>
+        <Reveal className="py-10 lg:text-sm sm:text-xsm">
           Embark on a journey of discovery as you explore our website and
           uncover the endless possibilities of software-driven transformation.
           From thought-provoking insights to inspiring success stories, we
@@ -126,14 +125,14 @@ const Home = () => {
           established enterprise seeking a competitive edge, we have the
           solutions and expertise to help you thrive in today's digital economy.
         </Reveal>
-        <Reveal className="text-xxlg font-bold ">Meet Our Team</Reveal>
-        <div className="flex py-10  items-center justify-center gap-40">
+        <Reveal className="lg:text-xxlg sm:text-xmd font-bold ">Meet Our Team</Reveal>
+        <div className="flex sm:flex-col lg:flex-row lg:py-10 items-center justify-center lg:gap-40 sm:gap-10">
           <Reveal>
-            <div className="flex flex-row items-center justify-center mb-10 w-full ">
+            <div className="flex flex-row items-center justify-center lg:mb-10 w-full ">
               <AnimatedTooltip items={people} />
             </div>
           </Reveal>
-          <Card className="w-[600px]">
+          <Card className="lg:w-[600px] sm:w-full lg:text-sm sm:text-xsm">
             Behind every successful project is a team of dedicated professionals
             committed to excellence. Meet the talented individuals who make up
             our team, each bringing a unique blend of skills, expertise, and
@@ -144,104 +143,104 @@ const Home = () => {
           </Card>
         </div>
       </div>
-      <div id="services" className="p-20 ">
-        <Reveal className="text-babyBlue text-md">•Services•</Reveal>
-        <Reveal className="text-xxlg font-bold">Services we offer</Reveal>
-        <div className="grid grid-cols-2 gap-5 pt-5">
+      <div id="services" className="lg:p-20 sm:p-5 ">
+        <Reveal className="text-babyBlue  lg:text-md sm:text-xsm">•Services•</Reveal>
+        <Reveal className="lg:text-xxlg sm:text-xmd  font-bold">Services we offer</Reveal>
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-5 pt-5">
           <Link to="/services/category-management">
             <Card className="gap-3 flex flex-col items-center justify-center">
               <img src="./../../categories.png" width={"80px"} />
-              <p className="text-lg font-bold">Category Management</p>
-              <p>Increase sales by defining category.</p>
+              <p className="lg:text-lg sm:text-md font-bold">Category Management</p>
+              <p className="lg:text-sm sm:text-xsm">Increase sales by defining category.</p>
               <p className="font-medium">Learn more →</p>
             </Card>
           </Link>
           <Link to="/services/dashboards">
             <Card className="gap-3 flex flex-col items-center justify-center">
               <img src="./../../monitor.png" width={"80px"} />
-              <p className="text-lg font-bold">Dashboards</p>
-              <p>Interactive insights in real-time.</p>
+              <p className="lg:text-lg sm:text-md font-bold">Dashboards</p>
+              <p className="lg:text-sm sm:text-xsm">Interactive insights in real-time.</p>
               <p className="font-medium">Learn more →</p>
             </Card>
           </Link>
           <Link to="/services/data-modernization">
             <Card className="gap-3 flex flex-col items-center justify-center">
               <img src="./../../data-analytics.png" width={"80px"} />
-              <p className="text-lg font-bold">Data Modernization</p>
-              <p>Cloud-based data processing at lightning speed.</p>
+              <p className="lg:text-lg sm:text-md font-bold">Data Modernization</p>
+              <p className="lg:text-sm sm:text-xsm">Cloud-based data processing at lightning speed.</p>
               <p className="font-medium">Learn more →</p>
             </Card>
           </Link>
           <Link to="/services/planograms">
             <Card className="gap-3 flex flex-col items-center justify-center">
               <img src="./../../planogram.png" width={"80px"} />
-              <p className="text-lg font-bold">Planograms</p>
-              <p>End-to-end automated planograms execution.</p>
+              <p className="lg:text-lg sm:text-md font-bold">Planograms</p>
+              <p className="lg:text-sm sm:text-xsm">End-to-end automated planograms execution.</p>
               <p className="font-medium">Learn more →</p>
             </Card>
           </Link>
         </div>
       </div>
-      <div id="software" className="p-20 ">
-        <Reveal className="text-babyBlue text-md">•SOFTWARE•</Reveal>
-        <Reveal className="text-xxlg font-bold">Software we offer</Reveal>
-        <div className="flex gap-3 pt-10">
-          <Reveal className="w-[600px]">
-            <img src="./../../software-chart.png" className="w-[600px]" />
+      <div id="software" className="lg:p-20 sm:p-10">
+        <Reveal className="text-babyBlue lg:text-md sm:text-xsm">•SOFTWARE•</Reveal>
+        <Reveal className="lg:text-xxlg sm:text-xmd font-bold">Software we offer</Reveal>
+        <div className="flex sm:flex-col lg:flex-row gap-3 pt-10">
+          <Reveal className="">
+            <img src="./../../software-chart.png" className="lg:w-[600px] sm:w-[350px]" />
           </Reveal>
-          <div className="flex flex-col gap-4 w-[600px]">
-            <Link to="/software/merhandising-app">
+          <div className="flex flex-col gap-4 lg:w-[600px] sm:w-[350px]">
+            <Link to="/software/merchandising-app">
               <Card className="gap-3 flex flex-col ">
-                <img src="./../../shopping-cart.png" width={"80px"} />
-                <p className="text-lg font-bold">Merchandising App</p>
-                <p>Digital planogram application with AI.</p>
+                <img src="./../../shopping-cart.png" className="lg:w-[80px] sm:w-[50px]"/>
+                <p className="lg:text-lg sm:text-xmd font-bold">Merchandising App</p>
+                <p className="lg:text-sm sm:text-xsm">Digital planogram application with AI.</p>
                 <p className="font-medium">Learn more →</p>
               </Card>
             </Link>
             <Link to="/software/crm-for-cpg">
               <Card className="gap-3 flex flex-col ">
-                <img src="./../../group.png" width={"80px"} />
-                <p className="text-lg font-bold">CRM For CPG</p>
-                <p>Mobile app to drive sales in realtime.</p>
+                <img src="./../../group.png" className="lg:w-[80px] sm:w-[50px]"/>
+                <p className="lg:text-lg sm:text-xmd font-bold">CRM For CPG</p>
+                <p className="lg:text-sm sm:text-xsm">Mobile app to drive sales in realtime.</p>
                 <p className="font-medium">Learn more →</p>
               </Card>
             </Link>
             <Link to="/software/hris">
               <Card className="gap-3 flex flex-col ">
-                <img src="./../../software.png" width={"80px"} />
-                <p className="text-lg font-bold">HRIS</p>
-                <p>Simolify and enhance yout HR operations.</p>
+                <img src="./../../software.png" className="lg:w-[80px] sm:w-[50px]"/>
+                <p className="lg:text-lg sm:text-xmd font-bold">HRIS</p>
+                <p className="lg:text-sm sm:text-xsm">Simolify and enhance yout HR operations.</p>
                 <p className="font-medium">Learn more →</p>
               </Card>
             </Link>
           </div>
         </div>
       </div>
-      <div id="case-studies" className="p-20 ">
+      <div id="case-studies" className="lg:p-20 sm:p-10">
         <Reveal className="text-babyBlue text-md">•CASE STUDIES•</Reveal>
-        <Reveal className="text-xxlg font-bold">Buisness Cases</Reveal>
+        <Reveal className="lg:text-xxlg sm:text-xmd  font-bold">Buisness Cases</Reveal>
         <div className="flex w-full justify-between pt-5">
-          <div className="flex gap-5">
+          <div className="flex lg:flex-row sm:flex-col gap-5">
             <Reveal>
               <motion.div whileHover={{ y: 10 }} transition={{ duration: 0.5 }}>
                 <Link
                   to="./case-studies/grocer"
-                  className="w-[450px] h-[370px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
+                  className="lg:w-[450px] lg:h-[370px] sm:w-[350px] sm:h-[300px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
                 >
                   <img
                     src="./../../canadian_banner.jpeg"
                     className="rounded-t-lg w-full h-full transition-transform duration-500 transform-gpu hover:scale-110"
                   />
                   <div className="py-4 px-6 flex flex-col gap-2 ">
-                    <p className="text-md font-black hover:text-babyBlue">
+                    <p className="lg:text-md sm:text-sm font-black hover:text-babyBlue">
                       Case-study | Canadian Grocer
                     </p>
-                    <p>
+                    <p className="lg:text-sm sm:text-xxsm">
                       The Canadian grocer has been increasing its store count
                       across Canada using older technology. As new stores were
                       added and growth continued, ...
-                    </p>
-                    <p className="font-medium hover:text-babyBlue">
+                    </p> 
+                    <p className="font-medium hover:text-babyBlue lg:text-sm sm:text-xsm">
                       Learn more →
                     </p>
                   </div>
@@ -252,21 +251,21 @@ const Home = () => {
               <motion.div whileHover={{ y: 10 }} transition={{ duration: 0.5 }}>
                 <Link
                   to="./case-studies/alcohol"
-                  className="w-[450px] h-[370px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
+                  className="lg:w-[450px] lg:h-[370px] sm:w-[350px] sm:h-[300px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
                 >
                   <img
                     src="./../../alcohol_banner.jpeg"
                     className="rounded-t-lg w-full h-full transition-transform duration-500 transform-gpu hover:scale-110"
                   />
                   <div className="py-4 px-6 flex flex-col gap-2 ">
-                    <p className="text-md font-black hover:text-babyBlue">
+                  <p className="lg:text-md sm:text-sm font-black hover:text-babyBlue">
                       Case Study | Client in the alcohol beverage industry.
                     </p>
-                    <p>
+                    <p className="lg:text-sm sm:text-xxsm">
                       The client is mandated to enhance revenue and
                       profitability at the retail level, ...
                     </p>
-                    <p className="font-medium hover:text-babyBlue">
+                    <p className="font-medium hover:text-babyBlue lg:text-sm sm:text-xsm">
                       Learn more →
                     </p>
                   </div>
@@ -274,29 +273,19 @@ const Home = () => {
               </motion.div>
             </Reveal>
           </div>
-          <Reveal>
-            <Link to="/case-studies">
-              <motion.button
-                whileHover={{ y: 10 }}
-                transition={{ duration: 0.5 }}
-                className="transtion-bg text-babyBlue border border-babyBlue py-4 px-6 rounded-2xl hover:bg-babyBlue hover:text-secondary "
-              >
-                See All Posts →
-              </motion.button>
-            </Link>
-          </Reveal>
+          
         </div>
       </div>
-        <div id="blog" className="p-20">
+        <div id="blog" className="lg:p-20 sm:p-10">
         <Reveal className="text-babyBlue text-md">•BLOG•</Reveal>
-        <Reveal className="text-xxlg font-bold">Latest news</Reveal>
+        <Reveal className="lg:text-xxlg sm:text-xmd font-bold">Latest news</Reveal>
         <Reveal>
           <div className=" rounded-md flex flex-col antialiased  dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
             <InfiniteMovingCards items={blogs} direction="right" speed="slow" />
           </div>
         </Reveal>
         </div>
-        <div className="flex w-full items-center justify-center p-20 text-xxlg font-extrabold bg-babyBlue text-secondary">
+        <div className="flex w-full items-center justify-center lg:p-20 sm:p-10 lg:text-xxlg sm:text-md font-extrabold bg-babyBlue text-secondary">
         Drive Growth and Profitability
         </div>
     </div>

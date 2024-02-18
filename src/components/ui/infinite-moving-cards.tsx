@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px]"
+            className="lg:w-[350px] sm:w-[200px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 lg:px-8 lg:py-6 sm:px-4 sm:py-3  md:w-[450px]"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
@@ -98,11 +98,11 @@ export const InfiniteMovingCards = ({
           >
             <blockquote>
             <Link to={`/blog/${item.link}`} className=" flex flex-col gap-2 overflow-hidden">
-                <img src={item.image} className="h-[250px] w-full  transition-transform duration-500 transform-gpu hover:scale-110"/>
-                <p className="text-md font-black hover:text-babyBlue">
+                <img src={item.image} className="lg:h-[250px] sm:h-[120px] w-full  transition-transform duration-500 transform-gpu hover:scale-110"/>
+                <p className="lg:text-md sm:text-xsm font-black hover:text-babyBlue">
                   {item.title}
                 </p>
-                <p>
+                <p className="lg:text-sm sm:text-xxsm ">
                   {item.quote}
                 </p>
                 <p className="font-medium hover:text-babyBlue">Learn more →</p>

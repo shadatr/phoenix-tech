@@ -24,10 +24,11 @@ export default {
         xxlg: "45px",
         xlg: "32px",
         lg: "30px",
+        xmd: "25px",
         md: "20px",
         sm:"16px",
         xsm:"15px",
-        xxsm:"8px"
+        xxsm:"11px"
       },
       animation: {
         scroll:

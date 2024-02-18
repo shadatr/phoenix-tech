@@ -32,18 +32,18 @@ const CaseStudies = () => {
 
   return (
     <div>
-      <div className=" pt-40 p-20 w-screen">
-        <p className="flex absolute  w-screen  text-xxlg font-extrabold">
+      <div className=" lg:pt-40 sm:pt-32 lg:p-20 sm:p-8 w-screen">
+        <p className="flex absolute w-screen lg:text-xxlg sm:text-xmd font-extrabold">
           {caseStudies?.title}
         </p>
       </div>
-      <div className="grid p-20 gap-10">
-        <img src={`./../../${caseStudies?.image}`} className="max-h-[500px]" />
+      <div className="grid lg:p-20 sm:p-8 sm:pt-20  gap-10">
+        <img src={`./../../${caseStudies?.image}`} className="lg:max-h-[500px] sm:max-h-[300px] sm:max-w-[300px] lg:max-w-full" />
         <Reveal className="text-xlg font-bold">
           {caseStudies?.begginning}
         </Reveal>
         <Reveal>
-          <span className="flex flex-col gap-5">
+          <span className="flex flex-col gap-5 lg:text-sm sm:text-xxsm">
             {caseStudies?.explanations.map((i) => (
               <p>{i}</p>
             ))}

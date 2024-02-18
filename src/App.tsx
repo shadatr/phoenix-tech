@@ -11,7 +11,8 @@ function App() {
 
   return (
    <div className='bg-darkBlue text-secondary'>
-      <Navbar/>
+
+      <Navbar />
       <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services/:serviceId" element={<Servis />} />
