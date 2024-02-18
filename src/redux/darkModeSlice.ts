@@ -17,6 +17,6 @@ export const darkModeSlice = createSlice({
 
 export const { toggleDarkMode } = darkModeSlice.actions;
 
-export const selectIsDarkMode = (state) => state.darkMode.isDarkMode;
+export const selectIsDarkMode = (state: { darkMode: { isDarkMode: boolean; }; }) => state.darkMode.isDarkMode;
 
 export default darkModeSlice.reducer;
