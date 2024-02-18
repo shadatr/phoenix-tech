@@ -185,14 +185,14 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div id="software" className="lg:p-20 sm:p-10">
+      <div id="software" className="lg:p-20 sm:p-5">
         <Reveal className="text-babyBlue lg:text-md sm:text-xsm">•SOFTWARE•</Reveal>
         <Reveal className="lg:text-xxlg sm:text-xmd font-bold">Software we offer</Reveal>
         <div className="flex sm:flex-col lg:flex-row gap-3 pt-10">
           <Reveal className="">
             <img src="./../../software-chart.png" className="lg:w-[600px] sm:w-[350px]" />
           </Reveal>
-          <div className="flex flex-col gap-4 lg:w-[600px] sm:w-[350px]">
+          <div className="flex flex-col gap-4 lg:w-[600px] sm:w-full">
             <Link to="/software/merchandising-app">
               <Card className="gap-3 flex flex-col ">
                 <img src="./../../shopping-cart.png" className="lg:w-[80px] sm:w-[50px]"/>
