@@ -16,7 +16,7 @@ const ImageSlider = () => {
   }, [images.length]);
 
   return (
-    <div className="image-slider">
+    <div className="image-slider text-secondary">
       {images.map((item, index) => (
         <div key={index} className={`image-slide ${index === currentImageIndex ? 'active' : ''}`}>
            <span  className={`flex absolute flex-col justify-center items-center text-center h-screen w-screen z-20 ${index === currentImageIndex ? 'animate-downToUp' : ''}`}>

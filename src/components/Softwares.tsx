@@ -89,7 +89,7 @@ const Softwares = () => {
   return (
     <div>
       <div className=" lg:h-[30vh] sm:h-[15vh] w-screen">
-      <p className="flex absolute w-screen lg:h-[30vh] sm:h-[15vh] justify-center items-center lg:text-xxlg sm:text-xmd font-extrabold">
+      <p className="flex absolute text-secondary  w-screen lg:h-[30vh] sm:h-[15vh] justify-center items-center lg:text-xxlg sm:text-xmd font-extrabold">
           {software?.title}
         </p>
         <img src="./../../background.webp" className="lg:h-[30vh] sm:h-[15vh] w-screen" />

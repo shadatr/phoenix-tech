@@ -3,6 +3,8 @@
 import { Link } from "react-router-dom";
 import { cn } from "./../../utils/cn";
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { selectIsDarkMode } from "../../redux/darkModeSlice";
 
 export const InfiniteMovingCards = ({
   items,
@@ -24,6 +26,7 @@ export const InfiniteMovingCards = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const isDarkMode = useSelector(selectIsDarkMode);
 
   useEffect(() => {
     addAnimation();
@@ -91,8 +94,7 @@ export const InfiniteMovingCards = ({
           <li
             className="lg:w-[350px] sm:w-[200px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 lg:px-8 lg:py-6 sm:px-4 sm:py-3  md:w-[450px]"
             style={{
-              background:
-                "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
+              background:`${isDarkMode?"linear-gradient(180deg, var(--slate-800), var(--slate-900) text-secondary":"bg-secondary text-primary" }`
             }}
             key={item.title}
           >

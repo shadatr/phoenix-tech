@@ -6,6 +6,8 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
+import { useSelector } from "react-redux";
+import { selectIsDarkMode } from "../redux/darkModeSlice";
 
 const card = [
   {
@@ -103,6 +105,8 @@ const blogs = [
 ];
 
 const Home = () => {
+  const isDarkMode = useSelector(selectIsDarkMode);
+
   return (
     <div className="w-screen">
       <ImageSlider />
@@ -225,7 +229,7 @@ const Home = () => {
               <motion.div whileHover={{ y: 10 }} transition={{ duration: 0.5 }}>
                 <Link
                   to="./case-studies/grocer"
-                  className="lg:w-[450px] lg:h-[370px] sm:w-[350px] sm:h-[300px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
+                  className={`lg:w-[450px] lg:h-[370px] sm:w-[350px] sm:h-[300px] flex flex-col rounded-lg overflow-hidden ${isDarkMode?"bg-medBlue text-secondary":"bg-secondary text-primary shadow-lg"}`}
                 >
                   <img
                     src="./../../canadian_banner.jpeg"
@@ -251,7 +255,7 @@ const Home = () => {
               <motion.div whileHover={{ y: 10 }} transition={{ duration: 0.5 }}>
                 <Link
                   to="./case-studies/alcohol"
-                  className="lg:w-[450px] lg:h-[370px] sm:w-[350px] sm:h-[300px] flex flex-col bg-medBlue rounded-lg overflow-hidden"
+                  className={`lg:w-[450px] lg:h-[370px] sm:w-[350px] sm:h-[300px] flex flex-col rounded-lg overflow-hidden ${isDarkMode?"bg-medBlue text-secondary":"bg-secondary text-primary shadow-lg"}`}
                 >
                   <img
                     src="./../../alcohol_banner.jpeg"
@@ -281,7 +285,7 @@ const Home = () => {
         <Reveal className="lg:text-xxlg sm:text-xmd font-bold">Latest news</Reveal>
         <Reveal>
           <div className=" rounded-md flex flex-col antialiased  dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-            <InfiniteMovingCards items={blogs} direction="right" speed="slow" />
+            <InfiniteMovingCards items={blogs} direction="right" speed="slow"  />
           </div>
         </Reveal>
         </div>

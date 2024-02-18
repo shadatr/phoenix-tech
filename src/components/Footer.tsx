@@ -6,11 +6,11 @@ const Footer = () => {
   return (
     <div className="lg:px-20 lg:py-40 sm:px-8 sm:py-8 flex gap-2 sm:flex-col lg:flex-row justify-between" id="contact-us">
       <span className="flex flex-col gap-5">
-        <img src={logo} className="lg:w-[200px] sm:w-[100px]"/>
+        <img src={logo} className="lg:w-[200px] sm:w-[100px] "/>
         <span>
           <input
             placeholder="Email Address"
-            className="lg:p-5 sm:p-2 lg:w-[300px] sm:w-[150px] rounded-l-lg"
+            className="lg:p-5 sm:p-2 lg:w-[300px] sm:w-[150px] rounded-l-lg border border-babyBlue"
           />
           <button className="bg-babyBlue text-secondary lg:p-5 sm:p-2 rounded-r-lg focus:outline-none">
             Subscribe
